@@ -87,12 +87,12 @@ def imshow_det_bboxes(img,
             "table": 'green',
             "formula": "yellow"
           }
-    labelss = {
-        "caption": "1",
-        "figure": "2",
-        "table": "3",
-        "formula": "4"
-      }
+    # labelss = {
+    #     "caption": "1",
+    #     "figure": "2",
+    #     "table": "3",
+    #     "formula": "4"
+    #   }
     # f = open(out_file.split(".")[0] + ".txt","w")
     text_color = mmcv.color_val(text_color)
     img = np.ascontiguousarray(img)
@@ -102,7 +102,7 @@ def imshow_det_bboxes(img,
         #print(color[label_text])
         colors =  mmcv.color_val(color[label_text])
         #print(labelss[label_text])
-        f.write(labelss[label_text] + " ")
+        # f.write(labelss[label_text] + " ")
         bbox_int = bbox.astype(np.int32)
         left_top = (bbox_int[0], bbox_int[1])
         right_bottom = (bbox_int[2], bbox_int[3])
@@ -119,11 +119,11 @@ def imshow_det_bboxes(img,
         # f.write("\n")
         #f.write(right_bottom)
     
-    if show:
-        imshow(img, win_name, wait_time)
-    if out_file is not None:
-        imwrite(img, out_file)
-        f.close()
+    # if show:
+    #     imshow(img, win_name, wait_time)
+    # if out_file is not None:
+    #     imwrite(img, out_file)
+    #     f.close()
     return img
 
 
