@@ -119,11 +119,11 @@ def imshow_det_bboxes(img,
         # f.write("\n")
         #f.write(right_bottom)
     
-    # if show:
-    #     imshow(img, win_name, wait_time)
-    # if out_file is not None:
-    #     imwrite(img, out_file)
-    #     f.close()
+    if show:
+        imshow(img, win_name, wait_time)
+    if out_file is not None:
+        imwrite(img, out_file)
+        # f.close()
     return img
 
 
