@@ -82,18 +82,18 @@ def imshow_det_bboxes(img,
         bboxes = bboxes[inds, :]
         labels = labels[inds]
     color = {
-            # "caption": 'red',
-            # "figure": 'blue',
+            "caption": 'red',
+            "figure": 'blue',
             "table": 'green',
-            # "formula": "yellow"
+            "formula": "yellow"
           }
     labelss = {
-        # "caption": "0",
-        # "figure": "1",
-        "table": "2",
-        # "formula": "3"
+        "caption": "1",
+        "figure": "2",
+        "table": "3",
+        "formula": "4"
       }
-    f = open(out_file.split(".")[0] + ".txt","w")
+    # f = open(out_file.split(".")[0] + ".txt","w")
     text_color = mmcv.color_val(text_color)
     img = np.ascontiguousarray(img)
     for bbox, label in zip(bboxes, labels):
@@ -115,8 +115,8 @@ def imshow_det_bboxes(img,
         font_scale=0.5
         cv2.putText(img, label_text, (bbox_int[0], bbox_int[1] - 2),
                     cv2.FONT_HERSHEY_COMPLEX, font_scale, colors)
-        f.write(str(bbox_int[0]) + " " + str(bbox_int[1]) + " " + str(bbox_int[2]) + " " + str(bbox_int[3]))
-        f.write("\n")
+        # f.write(str(bbox_int[0]) + " " + str(bbox_int[1]) + " " + str(bbox_int[2]) + " " + str(bbox_int[3]))
+        # f.write("\n")
         #f.write(right_bottom)
     
     if show:
