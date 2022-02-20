@@ -94,7 +94,7 @@ def imshow_det_bboxes(img,
     #     "formula": "4"
     #   }
     # f = open(out_file.split(".")[0] + ".txt","w")
-    text_color = mmcv.color_val(text_color)
+    # text_color = mmcv.color_val(text_color)
     img = np.ascontiguousarray(img)
     for bbox, label in zip(bboxes, labels):
         label_text = class_names[
